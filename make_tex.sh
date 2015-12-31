@@ -16,6 +16,11 @@ grep -v frontmatter out/introduction.tex | grep -v mainmatter > out/introduction
 rm out/introduction.tex
 mv out/introduction_clean.tex out/introduction.tex
 
+# deal with images
+# grep "includegraphics{http" *.tex
+# then just insert images/downloads/filename into tex file
+
 cd out
 sed -i 's/includegraphics/includegraphics[width=0.5\\textwidth]/' *.tex
 cd ..
+
