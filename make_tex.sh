@@ -3,13 +3,11 @@
 while read line; do
     if [ "$line" != "" ]; then
 	if [[ $line != *"#"* ]]; then
-	    if [[ $line != *"exercises"* ]]; then
-		set -- $line;
-		printf '\n***\n';
-		echo '*** make tex' $1 $2;
-	        printf '***\n\n';
-		pandoc --from markdown --to latex out/$2.md -o out/$2.tex;
-	    fi
+	    set -- $line;
+	    printf '\n***\n';
+	    echo '*** make tex' $1 $2;
+	    printf '***\n\n';
+	    pandoc --from markdown --to latex out/$2.md -o out/$2.tex;
 	fi
     fi
 done < filenames.txt 
