@@ -17,4 +17,4 @@ while read line; do
 	    fi
 	fi
     fi
-done < ../realbook/filenames.txt 
+done < ../leanpub/filenames.txt 

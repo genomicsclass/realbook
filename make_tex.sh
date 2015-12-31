@@ -10,7 +10,7 @@ while read line; do
 	    pandoc --from markdown --to latex out/$2.md -o out/$2.tex;
 	fi
     fi
-done < filenames.txt 
+done < ../leanpub/filenames.txt 
 
 grep -v frontmatter out/introduction.tex | grep -v mainmatter > out/introduction_clean.tex
 rm out/introduction.tex
