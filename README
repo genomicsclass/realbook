@@ -1,11 +1,24 @@
-first copy over the `images` folder from leanpub repo
+Steps to make the real book using latex:
+
+1) First copy over the `images` folder from leanpub repo
 from `leanpub/manuscript` to `realbook/out`
 
-then:
+2) Remove the images associated with the title to save space:
+
+images/1477*
+images/title_page*
+
+3) Run the following bash scripts:
 
 make_md_figs
 make_assess
 make_tex
 make_wrapper
+
+4) Try to build a PDF:
+
 cd out
 pdflatex wrapper.tex
+
+5) Search the PDF file for "## Error"
+
