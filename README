@@ -1,2 +1,11 @@
-don't forget to cp -r images folder from `leanpub/manuscript` to `out`
+first copy over the `images` folder from leanpub repo
+from `leanpub/manuscript` to `realbook/out`
 
+then:
+
+make_md_figs
+make_assess
+make_tex
+make_wrapper
+cd out
+pdflatex wrapper.tex
