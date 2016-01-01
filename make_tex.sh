@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# four whitespaces will be made to verbatim environment by pandoc
+cd out
+sed -i 's/^    //' *exercises.md
+cd ..
+
 while read line; do
     if [ "$line" != "" ]; then
 	if [[ $line != *"#"* ]]; then
@@ -16,11 +21,10 @@ grep -v frontmatter out/introduction.tex | grep -v mainmatter > out/introduction
 rm out/introduction.tex
 mv out/introduction_clean.tex out/introduction.tex
 
-# deal with images
-# grep "includegraphics{http" *.tex
-# then just insert images/downloads/filename into tex file
-
 cd out
+sed -i 's/includegraphics{http.*\(\/.*\)}/includegraphics{images\/downloads\1}/' *.tex
 sed -i 's/includegraphics/includegraphics[width=0.5\\textwidth]/' *.tex
+sed -i 's/begin{align\*/begin{aligned/' *.tex
+sed -i 's/end{align\*/end{aligned/' *.tex
+sed -i 's/360px-Donut-Chart.svg.png/donut.png/' plots_to_avoid.tex
 cd ..
-
