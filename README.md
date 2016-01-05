@@ -5,23 +5,25 @@ from `leanpub/manuscript` to `realbook/out`
 
 2) Remove the images associated with the title to save space:
 
-images/1477*
-images/title_page*
+`images/1477*`
+`images/title_page*`
 
-3) Run the following bash scripts:
+3) Run these bash scripts:
 
-make_md_figs.sh
-make_assess.sh
-make_tex.sh
-make_wrapper.sh
+NOTE: if you are on a Mac, there will be an issue with the `sed -i` in `make_tex.sh`.
+If you are on a Mac, use `make_tex_mac.sh` instead.
 
-NOTE: there may be an issue with the -i in make_tex.sh on Mac.
-In case, use the make_tex_mac.sh.
+`make_md_figs.sh`
+`make_assess.sh`
+`make_tex.sh`
+`make_wrapper.sh`
 
 4) Try to build a PDF:
 
+```
 cd out
 pdflatex wrapper.tex
+```
 
 5) Search the PDF file for "## Error"
 
