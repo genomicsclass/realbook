@@ -10,10 +10,13 @@ images/title_page*
 
 3) Run the following bash scripts:
 
-make_md_figs
-make_assess
-make_tex
-make_wrapper
+make_md_figs.sh
+make_assess.sh
+make_tex.sh
+make_wrapper.sh
+
+NOTE: there may be an issue with the -i in make_tex.sh on Mac.
+In case, use the make_tex_mac.sh.
 
 4) Try to build a PDF:
 
