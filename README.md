@@ -1,7 +1,8 @@
 Steps to make the real book using latex:
 
 1) First copy over the `images` folder from leanpub repo
-from `leanpub/manuscript` to `realbook/out`
+from `leanpub/manuscript` to `realbook/out`. Make an empty dir
+`realbook/out/figure`.
 
 2) Remove the images associated with the title to save space:
 
