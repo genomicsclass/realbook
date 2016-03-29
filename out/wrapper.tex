@@ -10,6 +10,16 @@
 \usepackage{booktabs}
 \usepackage[margin=1in]{geometry}
 
+% count Figures within section
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+
+% put links in footnotes
+\usepackage{hyperref}
+\newcommand\fnurl[2]{%
+  \href{#2}{#1}\footnote{\url{#2}}%
+}
+
 \DefineShortVerb[commandchars=\\\{\}]{\|}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
 % Add ',fontsize=\small' for more characters per line
