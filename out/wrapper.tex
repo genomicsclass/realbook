@@ -9,16 +9,19 @@
 \usepackage{booktabs}
 \usepackage[margin=1in]{geometry}
 
-% count Figures within section
+% count figures within section
 \usepackage{chngcntr}
 \counterwithin{figure}{section}
 
 % put links in footnotes
 \usepackage{hyperref}
-
-\newcommand\fnurl[2]{%
-  \href{#1}{#2}\footnote{\url{#1}}%
+\newcommand{\fnurl}[2]{
+  \href{#1}{#2}\footnote{\url{#1}}
 }
+
+% sections on new page
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
 
 \DefineShortVerb[commandchars=\\\{\}]{\|}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
