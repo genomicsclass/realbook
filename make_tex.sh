@@ -28,4 +28,5 @@ sed -i 's/includegraphics{http.*\(\/.*\)}/includegraphics{images\/downloads\1}/'
 sed -i 's/includegraphics/includegraphics[width=0.5\\textwidth]/' *.tex
 sed -i 's/begin{align\*/begin{aligned/' *.tex
 sed -i 's/end{align\*/end{aligned/' *.tex
+sed -i 's/href/fnurl/' *.tex
 cd ..
