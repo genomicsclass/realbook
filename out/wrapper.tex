@@ -1,5 +1,4 @@
 \documentclass{article}
-\usepackage{hyperref}
 \usepackage{color}
 \usepackage{fancyvrb}
 \usepackage{graphicx}
@@ -16,8 +15,9 @@
 
 % put links in footnotes
 \usepackage{hyperref}
+
 \newcommand\fnurl[2]{%
-  \href{#2}{#1}\footnote{\url{#2}}%
+  \href{#1}{#2}\footnote{\url{#1}}%
 }
 
 \DefineShortVerb[commandchars=\\\{\}]{\|}
